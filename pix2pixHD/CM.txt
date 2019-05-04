@@ -1,0 +1,11 @@
+cd pix2pixHD
+
+python train.py --name test_01 --dataroot ./datasets/test01/ --no_instance --label_nc 0 --loadSize 512 --fineSize 512 --resize_or_crop none --niter 200 --niter_decay 200 --gpu_ids 0 --save_epoch_freq 20 --continue_train
+
+python test.py --name test_01 --dataroot ./datasets/test01/ --no_instance --label_nc 0 --loadSize 512 --fineSize 512 --resize_or_crop none --how_many 2000 --gpu_ids 0
+
+--niter 200
+--niter_decay 200
+--gpu_ids 0
+--save_epoch_freq 20
+--continue_train
